@@ -28,6 +28,9 @@ body {
 main {
   width: 450px;
   padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin-left: auto;
   margin-right: auto;
   background: white;
