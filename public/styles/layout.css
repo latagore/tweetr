@@ -29,8 +29,8 @@ main {
   width: 450px;
   padding-top: 100px;
   padding-bottom: 100px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 2em;
+  padding-right: 2em;
   margin-left: auto;
   margin-right: auto;
   background: white;
