@@ -27,3 +27,56 @@
 .new-tweet .counter.invalid {
   color: red;
 }
+
+
+article {
+  margin-top: 1rem;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+}
+
+article header {
+  padding: 10px;
+  background: #ededee;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+article header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+article header .icon {
+  display: inline-block;
+  border-radius: 5px;
+  float: left;
+}
+
+article header h3 {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 0.5rem;
+  font-size: 200%;
+}
+
+article header .user-handle {
+  float: right;
+}
+
+article .text {
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 120%
+}
+
+article footer {
+  border-top: 1px solid #ededee;
+  padding: 0.5rem;
+}
+
+article footer .date {
+  font-size: 85%;
+  vertical-align: middle;
+}
