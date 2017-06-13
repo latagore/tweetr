@@ -1,3 +1,9 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .new-tweet {
   position: relative;
   background-color: #ededee;
@@ -29,10 +35,18 @@
 }
 
 
+article:hover {
+  border-color: lightgrey;
+}
+
 article {
   margin-top: 1rem;
   border: 1px solid #CCC;
   border-radius: 5px;
+}
+
+article:hover header {
+  opacity: 1;
 }
 
 article header {
@@ -40,12 +54,7 @@ article header {
   background: #ededee;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-}
-
-article header:after {
-  content: "";
-  display: table;
-  clear: both;
+  opacity: 0.8;
 }
 
 article header .icon {
@@ -68,15 +77,40 @@ article header .user-handle {
 article .text {
   padding: 1rem;
   margin: 1rem 0;
-  font-size: 120%
+  font-size: 120%;
+}
+
+article:hover footer .button-group {
+  display: block;
 }
 
 article footer {
   border-top: 1px solid #ededee;
   padding: 0.5rem;
+  position: relative;
+  height: 40px;
 }
 
 article footer .date {
   font-size: 85%;
   vertical-align: middle;
+}
+
+article footer .button-group {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  bottom: 0;
+  line-height: 40px;
+}
+
+article footer .button-group button {
+  margin-left: 0.5rem;
+  vertical-alignd middle;
+  line-height: normal;
+  padding: 0;
+  border-style: none;
+  background: none;
+  color: #60c5b7
 }
