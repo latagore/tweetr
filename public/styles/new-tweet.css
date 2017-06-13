@@ -61,6 +61,8 @@
   display: inline-block;
   border-radius: 5px;
   float: left;
+  width: 64px;
+  height: 64px;
 }
 
 .tweet header .user-name {
