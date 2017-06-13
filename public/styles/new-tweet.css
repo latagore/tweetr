@@ -35,68 +35,68 @@
 }
 
 
-article:hover {
+.tweet:hover {
   border-color: lightgrey;
 }
 
-article {
+.tweet {
   margin-top: 1rem;
   border: 1px solid #CCC;
   border-radius: 5px;
 }
 
-article:hover header {
+.tweet:hover header {
   opacity: 1;
 }
 
-article header {
-  padding: 10px;
+.tweet header {
+  padding: 0.5rem;
   background: #ededee;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   opacity: 0.8;
 }
 
-article header .icon {
+.tweet header .user-icon {
   display: inline-block;
   border-radius: 5px;
   float: left;
 }
 
-article header h3 {
+.tweet header .user-name {
   display: inline-block;
   vertical-align: top;
   margin: 0 0 0 0.5rem;
   font-size: 200%;
 }
 
-article header .user-handle {
+.tweet header .user-handle {
   float: right;
 }
 
-article .text {
+.tweet .text {
   padding: 1rem;
   margin: 1rem 0;
   font-size: 120%;
 }
 
-article:hover footer .button-group {
+.tweet:hover footer .button-group {
   display: block;
 }
 
-article footer {
+.tweet footer {
   border-top: 1px solid #ededee;
   padding: 0.5rem;
   position: relative;
   height: 40px;
 }
 
-article footer .date {
+.tweet footer .date {
   font-size: 85%;
   vertical-align: middle;
 }
 
-article footer .button-group {
+.tweet footer .button-group {
   display: none;
   position: absolute;
   top: 0;
@@ -105,12 +105,12 @@ article footer .button-group {
   line-height: 40px;
 }
 
-article footer .button-group button {
+.tweet footer .button-group button {
   margin-left: 0.5rem;
-  vertical-alignd middle;
+  vertical-align: middle;
   line-height: normal;
   padding: 0;
   border-style: none;
   background: none;
-  color: #60c5b7
+  color: #60c5b7;
 }
