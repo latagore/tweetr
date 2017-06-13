@@ -11,12 +11,13 @@ $(document).ready(function () {
     var user = data.user;
     var header = $('<header class="clearfix">').append(
       '<img class="user-icon" src="' + user.avatars.regular + '" />' +
-      '<h3 class="user-name">' + user.name + '</h3>' +
-      '<span class="user-handle">' + user.handle + '</span>'
+      '<h3 class="user-name"></h3>' +
+      '<span class="user-handle"></span>'
     );
-    
+    header.find('.user-name').text(user.name);
+    header.find('.user-handle').text(user.handle);
     var content = data.content;
-    var body = $('<div class="text">' + content.text + '</div>');
+    var body = $('<div class="text">').text(content.text);
     
     // TODO date
     var footer = $('<footer>').append(
@@ -60,7 +61,7 @@ $(document).ready(function () {
         },
         "handle": "@rd" },
       "content": {
-        "text": "Je pense , donc je suis"
+        "text": "<script>alert('hello world')</script>"
       },
       "created_at": 1461113959088
     },
