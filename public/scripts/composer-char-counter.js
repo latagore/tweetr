@@ -1,8 +1,8 @@
 var MAX_TWEET_LENGTH = 140;
 $(document).ready(function () {
   // use keypress for keystrokes
-  // include keydown and keyup for pasting
-  $('.new-tweet textarea').on('keypress keydown keyup', function () {
+  // include keyup for pasting
+  $('.new-tweet textarea').on('keypress keyup', function () {
     console.log("hello");
     var that = $(this);
     var text = that.val();
