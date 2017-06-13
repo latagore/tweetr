@@ -23,3 +23,7 @@
   bottom: 0.5rem;
   right: 0.5rem;
 }
+
+.new-tweet .counter.invalid {
+  color: red;
+}
