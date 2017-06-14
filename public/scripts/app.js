@@ -91,8 +91,12 @@ $(document).ready(function () {
         data: data
       }).then(loadTweets);
     }
-    
-    
+  });
+  
+  $('#compose').on('click', function () {
+    var newTweetArea = $('.new-tweet');
+    newTweetArea.slideToggle();
+    newTweetArea.find('textarea').focus();
   });
   
   loadTweets();
