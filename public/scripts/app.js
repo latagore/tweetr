@@ -90,6 +90,7 @@ $(document).ready(function () {
         url: '/tweets',
         data: data
       }).then(loadTweets);
+      $(this).find('textarea').val('');
     }
   });
   
