@@ -89,5 +89,24 @@ $(document).ready(function () {
     });
   }
   
+  function objectifyForm(formArray) {//serialize data function
+    var result = {};
+    for (var i = 0; i < formArray.length; i++){
+      result[formArray[i].name] = formArray[i].value;
+    }
+    return result;
+  }
+  
+  $('.new-tweet form').on('submit', function (event) {
+    event.preventDefault();
+    
+    var data = objectifyForm($(this).serializeArray());
+    
+    $.post({
+      url: '/tweets',
+      data: data
+    });
+  });
+  
   renderTweets(data);
 });
