@@ -33,3 +33,10 @@
 .new-tweet .counter.invalid {
   color: red;
 }
+
+.new-tweet .error {
+  padding: 0.25em;
+  border: 1px solid #FAA;
+  border-radius: 5px;
+  background: #FCC;
+}

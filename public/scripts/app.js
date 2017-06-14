@@ -61,14 +61,37 @@ $(document).ready(function () {
     });
   }
   
+  function getNewTweetErrorElement() {
+    var el = $(".new-tweet .error");
+    if (!el.length) {
+      el = $('<div class="error">').prependTo('.new-tweet form');
+    }
+    el.hide();
+    return el;
+  }
+  
   $('.new-tweet form').on('submit', function (event) {
     event.preventDefault();
     
     var data = objectifyForm($(this).serializeArray());
-    $.post({
-      url: '/tweets',
-      data: data
-    }).then(loadTweets);
+    
+    // validate form
+    if (data.text.length === 0) {
+      getNewTweetErrorElement()
+        .text('Type some text to tweet!')
+        .slideDown();
+    } else if (data.text.length > 140) {
+      getNewTweetErrorElement()
+        .text('Your tweet is too long!')
+        .slideDown();
+    } else {
+      getNewTweetErrorElement().slideUp();
+      $.post({
+        url: '/tweets',
+        data: data
+      }).then(loadTweets);
+    }
+    
     
   });
   
