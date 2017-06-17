@@ -21,7 +21,7 @@ $(document).ready(function () {
     
     // TODO date
     var footer = $('<footer>').append(
-      '<span class="date">10 days ago</span>' +
+      '<span class="date">' + moment(data.created_at).fromNow() + '</span>' +
       '<span class="button-group">' +
         '<button><i class="fa fa-flag"></i></button>' +
         '<button><i class="fa fa-retweet"></i></button>' +
